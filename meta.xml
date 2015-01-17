@@ -1,0 +1,21 @@
+<meta>
+    <info author="StiviK" version="0.1" name="" description="" type="script" />
+    <min_mta_version client="1.4.0" server="1.4.0" />
+    <oop>true</oop>
+
+    <!-- Shared/Util -->
+        <script src="Shared/util.lua" type="shared"/>
+        <script src="Shared/classlib.lua" type="shared"/>
+    <!-- -->
+
+    <!-- Server -->
+        <script src="Server/class.MirrorBot_Sync.lua" type="serve"/>
+    <!-- -->
+
+    <!-- Client -->
+        <script src="Client/class.MirrorBot.lua" type="client"/>
+        <script src="Client/class.MirrorBot_Sync.lua" type="client"/>
+
+        <script src="Client/Main.lua" type="client"/>
+    <!-- -->
+</meta>
