@@ -113,7 +113,7 @@ function MirrorBot:render ()
 
         x, y, z, rx, ry, rz = nil, nil, nil, nil, nil, nil
 
-        --triggerServerEvent("SERVER:Sync_setRemoteBotData", localPlayer, {self.id, "rotation", {self.currentPosition.x, self.currentPosition.y, self.currentPosition.z}, {self.currentRotation.x, self.currentRotation.y, self.currentRotation.z}, {getElementVelocity(self.car)}, {getVehicleTurnVelocity(self.car)}})
+        triggerServerEvent("SERVER:Sync_setRemoteBotData", localPlayer, {self.id, "rotation", {self.currentPosition.x, self.currentPosition.y, self.currentPosition.z}, {self.currentRotation.x, self.currentRotation.y, self.currentRotation.z}, {getElementVelocity(self.car)}, {getVehicleTurnVelocity(self.car)}})
     else
         if self.valid then
             self:destructor()
