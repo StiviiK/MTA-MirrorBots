@@ -30,10 +30,14 @@ function MirrorBot_Sync:newRemoteBot (args)
     setElementVelocity(self.car, unpack(args[9]))
 
     self:setControlState("accelerate", true)
-
-    MirrorBot_Sync.clients[source][args[8]] = self;
+    
+    MirrorBot_Sync:bindInstance(source, args[8], self)
 end
 addEventHandler("CLIENT:Sync_newRemoteBot", root, bind(MirrorBot_Sync.newRemoteBot, MirrorBot_Sync))
+
+function MirrorBot_Sync:bindInstance (syncer, id, instance)
+    self.clients[syncer][id] = instance;
+end
 
 function MirrorBot_Sync:getInstance (syncer, id)
     return (self.clients[source] ~= nil and self.clients[source][id]) or false;
@@ -47,7 +51,7 @@ end
 
 function MirrorBot_Sync:updateBotData (id, data, arg1, arg2, arg3, arg4)
     if self.clients[source] then
-        local self = self.clients[source][id]
+        local self = self:getInstance(source, id)
 
         if data == "rotation" then
             self.currentPosition = Vector3(unpack(arg1))
