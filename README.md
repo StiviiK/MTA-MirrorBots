@@ -9,9 +9,9 @@ bot MirrorBot:new(int posX, int posY, int posZ, int rotX, int rotY, int rotZ)
 
 ### Destroy the Bot:
 ```lua
-bot:destructor()
+nil bot:destructor()
 -- or
-MirrorBot:destructor() --> this will destroy all bots
+nil MirrorBot:destructor() --> this will destroy all bots
 ```
 
 ### Bot variables:
