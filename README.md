@@ -21,5 +21,5 @@ bool bot.valid --> indicates if the bot is invalid
 element bot.driver --> this is the bot (ped)
 element bot.car --> the car which drives the bot
 vector3 bot.currentRotation --> the current rotation of the bot
-vector3 bot.cureentPosition --> the current position of the bot
+vector3 bot.currentPosition --> the current position of the bot
 ```
